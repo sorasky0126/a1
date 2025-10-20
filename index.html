@@ -43,7 +43,6 @@
         
         .section {
             margin-bottom: 30px;
-            page-break-inside: avoid;
         }
         
         .section-title {
@@ -91,6 +90,7 @@
             border-collapse: collapse;
             margin: 20px 0;
             font-size: 13px;
+            page-break-inside: avoid;
         }
         
         table caption {
@@ -116,6 +116,7 @@
             padding: 15px;
             margin-bottom: 20px;
             border: 2px solid #4a90e2;
+            page-break-inside: avoid;
         }
         
         .question-label {
@@ -140,6 +141,7 @@
             padding: 15px;
             margin-top: 30px;
             border: 2px dashed #666;
+            page-break-inside: avoid;
         }
         
         .answer-section h3 {
@@ -152,6 +154,7 @@
             padding: 15px;
             margin-top: 20px;
             border-left: 4px solid #ffc107;
+            page-break-inside: avoid;
         }
         
         .vocab h3 {
@@ -175,6 +178,7 @@
             padding: 20px;
             border: 3px solid #4a90e2;
             margin: 20px 0;
+            page-break-inside: avoid;
         }
         
         .poster-title {
@@ -245,6 +249,22 @@
             
             .section {
                 page-break-inside: avoid;
+            }
+            
+            table {
+                page-break-inside: avoid;
+            }
+            
+            .question {
+                page-break-inside: avoid;
+            }
+            
+            .poster {
+                page-break-inside: avoid;
+            }
+            
+            .passage {
+                page-break-inside: auto;
             }
         }
     </style>
