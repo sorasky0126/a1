@@ -3,550 +3,935 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>神奈川県公立高校入試 英語長文問題</title>
+    <title>神奈川県公立高校 英語入試 科学テーマ長文問題</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @page {
+            size: A4;
+            margin: 20mm;
         }
         
         body {
-            font-family: 'MS Gothic', 'Yu Gothic', sans-serif;
-            line-height: 1.8;
-            padding: 20px;
-            background: white;
-        }
-        
-        .container {
-            max-width: 210mm;
+            font-family: "MS Mincho", "游明朝", serif;
+            font-size: 11pt;
+            line-height: 1.7;
+            max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
             background: white;
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
+            border-bottom: 2px solid #000;
             padding-bottom: 15px;
-            border-bottom: 3px solid #333;
         }
         
         .header h1 {
-            font-size: 20px;
-            margin-bottom: 5px;
+            font-size: 16pt;
+            margin: 10px 0;
         }
         
-        .header p {
-            font-size: 14px;
-            color: #666;
+        .header h2 {
+            font-size: 13pt;
+            margin: 5px 0;
         }
         
-        .section {
-            margin-bottom: 30px;
-        }
-        
-        .section-title {
-            background: #333;
-            color: white;
-            padding: 8px 15px;
-            font-size: 16px;
+        .question-number {
             font-weight: bold;
-            margin-bottom: 15px;
+            font-size: 12pt;
+            margin: 25px 0 15px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #333;
         }
         
-        .passage {
+        .english-text {
+            line-height: 1.8;
+            text-align: justify;
+            margin: 15px 0;
+        }
+        
+        .graph-container {
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #333;
             background: #f9f9f9;
-            padding: 20px;
-            border-left: 4px solid #4a90e2;
-            margin-bottom: 20px;
-            line-height: 2;
-        }
-        
-        .passage p {
-            margin-bottom: 15px;
-            text-indent: 1em;
-        }
-        
-        .passage p:first-child {
-            text-indent: 0;
-            font-weight: bold;
-        }
-        
-        .underline {
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        
-        .blank {
-            display: inline-block;
-            min-width: 80px;
-            border-bottom: 2px solid #333;
             text-align: center;
+        }
+        
+        .graph-title {
             font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 11pt;
         }
         
         table {
-            width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 13px;
-            page-break-inside: avoid;
+            margin: 15px auto;
+            width: 90%;
         }
         
-        table caption {
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: left;
-            font-size: 14px;
-        }
-        
-        th, td {
+        table th, table td {
             border: 1px solid #333;
-            padding: 10px;
+            padding: 8px;
             text-align: center;
         }
         
-        th {
+        table th {
             background: #e0e0e0;
             font-weight: bold;
         }
         
-        .question {
-            background: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 2px solid #4a90e2;
-            page-break-inside: avoid;
-        }
-        
-        .question-label {
-            font-weight: bold;
-            color: #4a90e2;
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        
-        .choices {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        
-        .choices div {
-            margin-bottom: 8px;
+        .vocab {
+            font-size: 10pt;
+            margin: 15px 0;
             line-height: 1.6;
         }
         
-        .answer-section {
-            background: #f0f0f0;
-            padding: 15px;
-            margin-top: 30px;
-            border: 2px dashed #666;
-            page-break-inside: avoid;
+        .underline {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
         }
         
-        .answer-section h3 {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        
-        .vocab {
-            background: #fff9e6;
-            padding: 15px;
-            margin-top: 20px;
-            border-left: 4px solid #ffc107;
-            page-break-inside: avoid;
-        }
-        
-        .vocab h3 {
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        
-        .vocab-list {
-            column-count: 2;
-            column-gap: 20px;
-        }
-        
-        .vocab-item {
-            margin-bottom: 5px;
-            font-size: 13px;
-            break-inside: avoid;
-        }
-        
-        .poster {
-            background: #e8f4f8;
-            padding: 20px;
-            border: 3px solid #4a90e2;
+        .question-section {
             margin: 20px 0;
-            page-break-inside: avoid;
+            padding: 15px;
+            background: #fafafa;
+            border-left: 3px solid #333;
         }
         
-        .poster-title {
+        .choices {
+            margin: 10px 0 10px 30px;
+        }
+        
+        .choices div {
+            margin: 5px 0;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        .footer {
             text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #4a90e2;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+            font-size: 10pt;
         }
-        
-        .poster-info {
-            margin-bottom: 15px;
-        }
-        
-        .poster-section {
-            margin-top: 15px;
-        }
-        
-        .poster-section h4 {
-            background: #4a90e2;
-            color: white;
-            padding: 5px 10px;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        
-        .poster-item {
-            margin-left: 15px;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-        
-        .button-container {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: #f0f0f0;
-            border-radius: 10px;
-        }
-        
-        .download-btn {
-            background: #4a90e2;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        
-        .download-btn:hover {
-            background: #357abd;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-        }
-        
+
         @media print {
-            .button-container {
-                display: none;
-            }
-            
             body {
+                max-width: 100%;
                 padding: 0;
             }
-            
-            .section {
-                page-break-inside: avoid;
-            }
-            
-            table {
-                page-break-inside: avoid;
-            }
-            
-            .question {
-                page-break-inside: avoid;
-            }
-            
-            .poster {
-                page-break-inside: avoid;
-            }
-            
-            .passage {
-                page-break-inside: auto;
+            .page-break {
+                page-break-after: always;
             }
         }
     </style>
 </head>
 <body>
-    <div class="button-container">
-        <button class="download-btn" onclick="window.print()">📄 PDFとして保存（印刷）</button>
-        <p style="margin-top: 10px; color: #666; font-size: 14px;">
-            ※ブラウザの印刷機能が開きます。「送信先」で「PDFに保存」を選択してください
-        </p>
+    <div class="header">
+        <h1>神奈川県公立高等学校入学者選抜 英語 練習問題</h1>
+        <h2>科学をテーマにした長文問題</h2>
+        <p style="margin-top: 10px;">共通選抜 全日制の課程</p>
     </div>
 
-    <div class="container">
-        <div class="header">
-            <h1>神奈川県公立高校入試対策　英語長文問題（科学テーマ）</h1>
-            <p>問6・問7　実戦形式</p>
+    <div class="question-number">問 6</div>
+    <p>次の英文は、高校生のケンタ(Kenta)が英語の授業でクラスの生徒に向けて行ったスピーチの原稿です。英文を読んで、あとのア~ウの問いに答えなさい。</p>
+
+    <div class="english-text">
+        <p>Hello, everyone. I'm Kenta. Today, I want to talk about renewable energy and why it's important for our future. When I was in junior high school, I didn't care about where our electricity came from. Every day, I used my smartphone, watched TV, and played video games without thinking about energy. I just thought that electricity would always be available when I needed it. I believed that if I turned on a light switch, the light would come on. If I wanted to charge my phone, I could just plug it into the wall. However, last summer, something happened that completely changed my thinking about energy.</p>
+
+        <p>During summer vacation, my family visited my grandmother in Hokkaido. She lives in a small town near the mountains, and the town is very different from Tokyo. There are only about 3,000 people living there, and you can see beautiful nature everywhere. One morning, my grandmother asked us if we wanted to see something special. She said it was a place that gives power to many houses in her town. At first, I didn't understand what she meant, but I was curious, so I said yes.</p>
+
+        <p>We drove for about 30 minutes through beautiful countryside. Then, suddenly, I saw something amazing. There were many large wind turbines standing in a wide field. I counted them—there were more than 20 turbines, and each one was taller than a ten-story building! The white blades were turning slowly in the wind, and they looked very beautiful against the blue sky. I had seen pictures of wind turbines before in textbooks, but seeing them in real life was completely different. I was so surprised that I couldn't speak for a few minutes.</p>
+
+        <p>My grandmother told me that these turbines provide clean electricity to many houses in her town. She explained that each turbine can make enough electricity for about 500 houses. She also said that ten years ago, her town bought most of its electricity from a power company that used coal and natural gas. But now, about 60% of the town's electricity comes from these wind turbines. The town also has some solar panels on the roofs of public buildings like schools and the city hall. My grandmother looked very proud when she told me this. She said that using renewable energy was important for our future because <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.</p>
+
+        <p>After listening to my grandmother, I started to think more deeply about energy. I realized that I had never really thought about how electricity is made or where it comes from. That night, I couldn't sleep well because I kept thinking about what I had seen. The next day, I decided to do some research on the Internet. I wanted to learn more about renewable energy and energy sources in Japan.</p>
+
+        <p>Let me show you some information about energy in Japan that I found. Please look at Graph 1 and Graph 2. Graph 1 shows what kinds of energy sources Japan used to make electricity in 2010 and 2020. In 2010, about 25% came from coal, 29% from natural gas, 29% from nuclear power, and only 9% from renewable energy. Eight percent came from other sources like oil. However, in 2020, the situation changed significantly. Coal increased a little to 31%, and natural gas increased to 37%. This was partly because of the earthquake in 2011 and the problems at the Fukushima nuclear power plant. Because of this disaster, many nuclear power plants in Japan were stopped. So nuclear power decreased to only 4% in 2020. The good news is that renewable energy increased to 20%—more than double what it was in 2010.</p>
+    </div>
+
+    <div class="graph-container">
+        <div class="graph-title">Graph 1: Energy Sources for Electricity in Japan</div>
+        <table>
+            <tr>
+                <th>Energy Source</th>
+                <th>2010</th>
+                <th>2020</th>
+            </tr>
+            <tr>
+                <td>Coal</td>
+                <td>25%</td>
+                <td>31%</td>
+            </tr>
+            <tr>
+                <td>Natural Gas</td>
+                <td>29%</td>
+                <td>37%</td>
+            </tr>
+            <tr>
+                <td>Nuclear Power</td>
+                <td>29%</td>
+                <td>4%</td>
+            </tr>
+            <tr>
+                <td>Renewable Energy</td>
+                <td>9%</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>Others</td>
+                <td>8%</td>
+                <td>8%</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="english-text">
+        <p>Now, let me show you another important piece of information. Graph 2 shows the cost of making electricity from different energy sources. This data is very interesting because many people think that renewable energy is too expensive. In 2015, the cost of solar power was about 16 yen per kilowatt hour. Wind power cost about 14 yen per kilowatt hour. At that time, coal power cost about 12 yen, and nuclear power cost about 10 yen. So, renewable energy was more expensive than traditional energy sources. However, look at what happened by 2023! Solar power decreased to about 8 yen per kilowatt hour—that's only half of what it was in 2015! Wind power also decreased to about 9 yen. But coal power and nuclear power didn't change much. Coal power increased a little to 13 yen, and nuclear power increased to 11 yen. From these graphs, I learned that <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;①&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.</p>
+    </div>
+
+    <div class="graph-container">
+        <div class="graph-title">Graph 2: Cost of Electricity by Energy Source (yen per kilowatt hour)</div>
+        <table>
+            <tr>
+                <th>Energy Source</th>
+                <th>2015</th>
+                <th>2023</th>
+            </tr>
+            <tr>
+                <td>Solar Power</td>
+                <td>16</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Wind Power</td>
+                <td>14</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Coal Power</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Nuclear Power</td>
+                <td>10</td>
+                <td>11</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="english-text">
+        <p>This surprised me a lot. Technology is improving very fast, and renewable energy is becoming affordable for more people. I think this is very good news for Japan and for the world.</p>
+    </div>
+
+    <div class="vocab">
+        ＊renewable energy: 再生可能エネルギー　available: 利用できる　switch: スイッチ　plug: 差し込む<br>
+        grandmother: 祖母　curious: 好奇心がある　amazing: 驚くべき　turbines: タービン　blades: 羽根<br>
+        coal: 石炭　natural gas: 天然ガス　panels: パネル　nuclear power: 原子力　situation: 状況<br>
+        significantly: 大幅に　disaster: 災害　decreased: 減少した　kilowatt hour: キロワット時　affordable: 手頃な
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="english-text">
+        <p>After visiting the wind farm, I wanted to learn more about renewable energy, so I spent many hours reading articles and watching videos online. I found that there are different types of renewable energy, and each type has its own advantages and disadvantages. Let me explain the main types.</p>
+
+        <p>First, there is solar energy, which comes from the sun. Solar panels on roofs or in large solar farms collect sunlight and change it into electricity. Japan has been installing more and more solar panels in recent years. I learned that Japan is actually one of the top countries in the world for solar power. Many houses in Japan now have solar panels on their roofs. My neighbor's house has solar panels, and he told me that his electricity bill is now very low. Sometimes, his panels make more electricity than his family needs, and he can sell the extra electricity back to the power company.</p>
+
+        <p>Second, there is wind energy, which comes from the wind. Wind turbines have large blades that turn when the wind blows. This turning motion creates electricity. Wind farms can be built on land, like the one I saw in Hokkaido, or they can be built in the ocean. Japan is starting to build more offshore wind farms because Japan is surrounded by the ocean and has strong ocean winds.</p>
+
+        <p>Third, there is hydroelectric energy, which comes from water. Japan has many mountains and rivers, so hydroelectric power has been used in Japan for a long time. In fact, hydroelectric power is Japan's largest source of renewable energy. Dams hold water in large lakes, and when the water flows down through the dam, it turns turbines to make electricity.</p>
+
+        <p>Fourth, there is geothermal energy, which comes from heat inside the Earth. Japan sits on a volcanic area, so there is a lot of geothermal energy available. However, Japan is not using much of this energy yet. I read that Iceland, another volcanic country, gets about 25% of its electricity from geothermal energy, but Japan only gets about 1%. I think Japan should try to use more geothermal energy in the future.</p>
+
+        <p>Finally, there is biomass energy, which comes from plants and other organic materials. For example, we can burn wood or use food waste to create energy. Some farmers in Japan are using biomass energy to power their farms.</p>
+
+        <p>These energy sources are called "renewable" because ( ② ). The sun will keep shining, the wind will keep blowing, and rivers will keep flowing for millions of years. We will never run out of these resources. Also, they don't produce much pollution. When we burn coal or oil, it releases carbon dioxide and other harmful gases into the air. These gases cause air pollution and contribute to climate change. But renewable energy doesn't release these gases, so it's much better for our environment and our health.</p>
+    </div>
+
+    <div class="vocab">
+        ＊advantages: 利点　disadvantages: 欠点　Solar energy: 太陽エネルギー　panels: パネル<br>
+        installing: 設置する　offshore: 沖合の　hydroelectric: 水力の　geothermal: 地熱の　volcanic: 火山の<br>
+        available: 利用できる　biomass: バイオマス　organic: 有機の　food waste: 食品廃棄物　pollution: 汚染<br>
+        carbon dioxide: 二酸化炭素　contribute: 貢献する　environment: 環境
+    </div>
+
+    <div class="english-text">
+        <p>However, I also learned that renewable energy has some problems and challenges. We need to understand these problems so we can work to solve them. For example, solar power doesn't work well when it's cloudy or at night. In Japan, we have a rainy season in June and July, and during this time, solar panels don't produce much electricity. Wind power also has problems. It needs strong wind to work well, but the wind doesn't blow strongly all the time. Sometimes the wind is too weak, and sometimes it's too strong and the turbines must be stopped to protect them from damage.</p>
+
+        <p>Some people also complain about wind turbines. They say that wind turbines are too noisy. When I was standing near the wind turbines in Hokkaido, I could hear a low sound as the blades turned. It wasn't very loud, but I could imagine that people living very close to wind turbines might find the sound annoying. Some people also say that wind turbines are not beautiful and that they ruin the scenery. In some places, people have opposed plans to build wind farms because they want to protect the natural beauty of their area. There is also a concern that wind turbines might harm birds. Birds sometimes fly into the spinning blades and die.</p>
+
+        <p>Another challenge is storage. When the sun is shining brightly and the wind is blowing strongly, renewable energy systems can make a lot of electricity. But what happens to this electricity if people don't need it right away? We need good batteries to store this energy so we can use it later when the sun isn't shining or the wind isn't blowing. Right now, batteries for storing large amounts of energy are expensive, and they don't last very long. Scientists and engineers around the world are working hard to develop better and cheaper batteries.</p>
+
+        <p>But I learned that scientists and engineers are working hard to solve these problems. They are making better batteries to store energy. New battery technology can store more energy and last longer than old batteries. They are also creating quieter turbines. New wind turbine designs make much less noise than old designs. Some engineers are even working on turbines that are safer for birds. These turbines have special sensors that can detect when birds are flying nearby, and the turbines can slow down or stop to protect the birds. Technology is always improving, and I believe that in the future, renewable energy will become even better and more efficient.</p>
+    </div>
+
+    <div class="vocab">
+        ＊challenges: 課題　rainy season: 梅雨　complain: 文句を言う　noisy: うるさい　annoying: うっとうしい<br>
+        ruin: 台無しにする　scenery: 景色　opposed: 反対した　concern: 懸念　harm: 傷つける<br>
+        storage: 貯蔵　batteries: バッテリー　sensors: センサー
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="english-text">
+        <p>After doing all this research, I started to think about what Japan should do in the future. I think we should use more renewable energy in Japan. ( ③ ), we can help protect our planet for future generations. We can reduce air pollution, fight climate change, and create a cleaner, healthier world for our children and grandchildren.</p>
+
+        <p>So this is my message: We should all think about where our energy comes from and try to support renewable energy. Even small actions can make a big difference. Let's not wait for someone else to solve this problem. Let's start today, right now. We can save energy in our daily lives, we can learn more about renewable energy, and we can share this knowledge with our friends and family. Let's work together to create a sustainable future—a future with clean air, clean water, and a healthy planet for everyone. Our generation has the power to make a difference. Let's use that power to create a better world. Thank you for listening.</p>
+    </div>
+
+    <div class="vocab">
+        ＊generations: 世代　grandchildren: 孫　polluted: 汚染された　ambitious: 野心的な　install: 設置する<br>
+        difference: 違い　Unplug: 抜く　charger: 充電器　energy-efficient: 省エネの　appliances: 家電製品<br>
+        light bulbs: 電球　air conditioning: エアコン　gasoline: ガソリン　fossil fuel: 化石燃料<br>
+        public transportation: 公共交通機関　electric: 電気の　politicians: 政治家　democracy: 民主主義<br>
+        sustainable: 持続可能な　generation: 世代
+    </div>
+
+    <div class="question-section">
+        <h3>ア</h3>
+        <p>本文中の<span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>の中に入れるのに最も適するものを、次の1~4の中から一つ選び、その番号を答えなさい。</p>
+        <div class="choices">
+            <div>1. renewable energy costs much more than other energy sources and is difficult to use</div>
+            <div>2. using fossil fuels will cause problems for the environment and future generations</div>
+            <div>3. nuclear power is the safest way to make electricity for Japanese people</div>
+            <div>4. wind turbines are too expensive for small towns and should not be built</div>
+        </div>
+    </div>
+
+    <div class="question-section">
+        <h3>イ</h3>
+        <p>本文中の( ① )~( ③ )の中に、次のA~Cを意味が通るように入れるとき、その組み合わせとして最も適するものを、あとの1~6の中から一つ選び、その番号を答えなさい。</p>
+        <div style="margin: 15px 0;">
+            <p>A. renewable energy is becoming cheaper and more popular in Japan</p>
+            <p>B. they will never run out and we can use them again and again</p>
+            <p>C. By using more renewable energy</p>
+        </div>
+        <div class="choices">
+            <div>1. ①:A　②:B　③:C</div>
+            <div>2. ①:A　②:C　③:B</div>
+            <div>3. ①:B　②:A　③:C</div>
+            <div>4. ①:B　②:C　③:A</div>
+            <div>5. ①:C　②:A　③:B</div>
+            <div>6. ①:C　②:B　③:A</div>
+        </div>
+    </div>
+
+    <div class="question-section">
+        <h3>ウ</h3>
+        <p>次のa~fの中から、ケンタのスピーチの内容に合うものを二つ選んだときの組み合わせとして最も適するものを、あとの1~8の中から一つ選び、その番号を答えなさい。</p>
+        <div style="margin: 15px 0;">
+            <p>a. Before visiting his grandmother, Kenta often thought about where electricity came from.</p>
+            <p>b. Nuclear power provided more electricity in 2020 than in 2010 in Japan.</p>
+            <p>c. The cost of making electricity from solar power and wind power has decreased significantly since 2015.</p>
+            <p>d. Renewable energy has no problems at all, so everyone should start using it immediately.</p>
+            <p>e. Scientists are trying to solve the problems of renewable energy by developing new technology.</p>
+            <p>f. Kenta believes that individuals cannot do anything to support renewable energy and only governments can help.</p>
+        </div>
+        <div class="choices">
+            <div>1. aとc</div>
+            <div>2. aとe</div>
+            <div>3. bとd</div>
+            <div>4. bとf</div>
+            <div>5. cとd</div>
+            <div>6. cとe</div>
+            <div>7. dとe</div>
+            <div>8. eとf</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="question-number">問 7</div>
+    <p>次のアの英文とポスター、イのメールとウェブサイトについて、それぞれあとのQuestionの答えとして最も適するものを、1~5の中からそれぞれ一つずつ選び、その番号を答えなさい。</p>
+
+    <div class="question-section" style="background: white; border: 1px solid #333; padding: 20px; margin: 20px 0;">
+        <h3 style="margin-top: 0;">ア</h3>
+        <div class="english-text">
+            <p>Yuki and Emma are classmates at Kamome High School. They are both very interested in science and want to become scientists in the future. They are talking about a science event they want to attend. It's Friday afternoon, and they are looking at a poster in their classroom.</p>
+
+            <p><strong>Yuki</strong>: Hey, Emma! Look at this poster about Kamome Science Festival. It looks really interesting! I saw it on the bulletin board this morning.</p>
+
+            <p><strong>Emma</strong>: Wow! I love science events. I went to a similar festival last year in another city, and I learned so much. When is this festival?</p>
+
+            <p><strong>Yuki</strong>: It's next Saturday, March 15th. That's perfect timing because we don't have school that day, and I don't have any other plans. There are three different programs we can join, and they all look fun.</p>
+
+            <p><strong>Emma</strong>: Which one do you want to join? I'm interested in all of them, but I especially want to see the chemistry show.</p>
+
+            <p><strong>Yuki</strong>: Well, I'm really interested in the robotics workshop because I want to learn how to program robots. I've been reading books about robotics, but I've never actually programmed a robot before. This would be a great opportunity to try it. But I'm also interested in the chemistry show like you.</p>
+
+            <p><strong>Emma</strong>: Me too! Let me check the times... The robotics workshop is in the morning from 10:00 to 12:00, and the chemistry show is in the afternoon from 2:00 to 4:00. That's great! We can do both! We'll have two hours for lunch between the programs.</p>
+
+            <p><strong>Yuki</strong>: That's true! But wait... Oh no, I just remembered. I have a piano lesson at 1:00 p.m. that day. I forgot about it. My teacher scheduled it last month, and I can't cancel it because my recital is coming up soon. My lessons usually take about 90 minutes, so I won't finish until 2:30.</p>
+
+            <p><strong>Emma</strong>: Oh, that's too bad. Then we can't see the chemistry show together. I really wanted to watch it with you.</p>
+
+            <p><strong>Yuki</strong>: I'm disappointed too. But how about this? Let's go to the robotics workshop together in the morning. After that, you can go to the chemistry show, and I'll go to my piano lesson. Then I can join the space presentation at 4:30 p.m., and you can join me if the chemistry show finishes on time. What do you think?</p>
+
+            <p><strong>Emma</strong>: That sounds like a good plan! Let me check the poster again to make sure... Yes, it says here that the chemistry show finishes at 4:00, so I'll have 30 minutes to get to the space presentation. The festival is all happening at Kamome Community Center, so I won't have to travel anywhere. That should be enough time. I can get a snack during that break and then meet you at the space presentation.</p>
+
+            <p><strong>Yuki</strong>: Perfect! And look at this—there's a special offer! If we join two or more programs, we can get a free science book! I love reading science books, so this is a great bonus. I wonder what book they'll give us.</p>
+
+            <p><strong>Emma</strong>: That's wonderful! I want to get that book too. So we both need to join at least two programs each. I'll join the chemistry show and the space presentation, and you'll join the robotics workshop and the space presentation. That means we'll both get a book!</p>
+
+            <p><strong>Yuki</strong>: Excellent! The website address is on the poster. Let's register online tonight before all the spots are taken. I think these programs might be popular, especially the robotics workshop. I heard that last year, some programs were full very quickly.</p>
+
+            <p><strong>Emma</strong>: Good idea! I'll register as soon as I get home. I'm so excited now! This is going to be a great Saturday. Oh, one more thing—should we meet at the community center, or should we go together from the train station?</p>
+
+            <p><strong>Yuki</strong>: How about we meet at the station at 9:30? The festival starts at 10:00, and it takes about 15 minutes to walk from the station to the community center, so we'll have enough time.</p>
+
+            <p><strong>Emma</strong>: Perfect! I can't wait! See you next Saturday!</p>
         </div>
 
-        <!-- 問6 -->
-        <div class="section">
-            <div class="section-title">問6　長文読解（スピーチと図表）【配点15点】</div>
+        <div style="border: 2px solid #000; padding: 20px; margin: 20px 0; background: #fffef0;">
+            <h2 style="text-align: center; margin: 0 0 15px 0;">KAMOME SCIENCE FESTIVAL 2025</h2>
+            <h3 style="text-align: center; margin: 0 0 20px 0;">Come and Explore the World of Science!</h3>
             
-            <p style="margin-bottom: 15px;">次の英文は、高校生のYuiが科学の授業でおこなったスピーチの原稿です。これを読んで、あとの(ア)～(ウ)の問いに答えなさい。</p>
+            <p><strong>Date:</strong> Saturday, March 15th, 2025<br>
+            <strong>Place:</strong> Kamome Community Center<br>
+            (15 minutes' walk from Kamome Station)</p>
+
+            <h4 style="margin: 20px 0 10px 0;">Programs:</h4>
             
-            <div class="passage">
-                <p>Good morning, everyone. Today, I'd like to talk about plastic waste and how science is helping us solve this problem.</p>
-                
-                <p>Last summer, I visited a beach with my family. I was shocked to see a lot of plastic bottles and bags on the sand. My father told me that these plastics come from cities and rivers, and they travel to the ocean. I learned that plastic waste is becoming a serious problem around the world.</p>
-                
-                <p>According to scientists, about 8 million tons of plastic enter the ocean every year. Look at Graph 1. It shows how much plastic waste different countries produced in 2020. <span class="underline">①</span> You can see that the amount varies greatly between countries. This plastic doesn't disappear easily. <span class="blank">( ア )</span> Scientists say that a plastic bottle can take up to 450 years to break down naturally in the ocean.</p>
-                
-                <p>This plastic waste is dangerous for marine animals. Many sea turtles and fish eat plastic by mistake because they think it's food. When they eat too much plastic, they can't eat real food anymore, and they may die. Scientists have found plastic inside the bodies of many ocean animals, including whales and seabirds.</p>
-                
-                <p>However, there is good news. Scientists are working hard to find solutions. One interesting development is biodegradable plastic. This type of plastic is made from plants like corn and sugarcane. <span class="underline">②</span> Unlike regular plastic, biodegradable plastic can break down naturally in just a few months. Some companies are already using this eco-friendly plastic to make shopping bags and food containers.</p>
-                
-                <p>Another solution is plastic-eating bacteria. In 2016, Japanese scientists discovered a special type of bacteria that can eat plastic. These tiny organisms break down plastic into simple materials that don't harm the environment. Researchers around the world are now studying these bacteria. <span class="underline">③</span> They hope to use them in the future to clean up plastic waste.</p>
-                
-                <p>Graph 2 shows the results of a survey about plastic use. The survey asked 500 high school students in Japan about their daily plastic use habits. The graph tells us important information about how young people are trying to reduce plastic waste.</p>
-                
-                <p>What can we do to help? I think we should start with small actions. We can bring our own bags when we go shopping. We can use reusable water bottles instead of plastic ones. We can also choose products that use less plastic packaging. If everyone makes these small changes, together we can make a big difference.</p>
-                
-                <p>Science is giving us hope for the future. With new technologies like biodegradable plastic and plastic-eating bacteria, I believe we can solve the plastic waste problem. But we also need to change our daily habits. Let's work together to protect our beautiful ocean!</p>
-                
-                <p>Thank you for listening.</p>
-            </div>
-            
-            <table>
-                <caption><strong>Graph 1: Plastic Waste Production in 2020</strong> (単位: 百万トン)</caption>
-                <thead>
-                    <tr>
-                        <th>国名</th>
-                        <th>プラスチック廃棄物量</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>アメリカ</td>
-                        <td>42.0</td>
-                    </tr>
-                    <tr>
-                        <td>中国</td>
-                        <td>59.1</td>
-                    </tr>
-                    <tr>
-                        <td>ドイツ</td>
-                        <td>14.5</td>
-                    </tr>
-                    <tr>
-                        <td>日本</td>
-                        <td>8.5</td>
-                    </tr>
-                    <tr>
-                        <td>インド</td>
-                        <td>9.5</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <table>
-                <caption><strong>Graph 2: Survey Results - "How often do you use the following?"</strong><br>(対象: 日本の高校生500人)</caption>
-                <thead>
-                    <tr>
-                        <th>行動</th>
-                        <th>毎日</th>
-                        <th>週に数回</th>
-                        <th>めったにない</th>
-                        <th>全くしない</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>マイバッグを持参</td>
-                        <td>35%</td>
-                        <td>40%</td>
-                        <td>15%</td>
-                        <td>10%</td>
-                    </tr>
-                    <tr>
-                        <td>再利用可能な水筒を使用</td>
-                        <td>62%</td>
-                        <td>25%</td>
-                        <td>8%</td>
-                        <td>5%</td>
-                    </tr>
-                    <tr>
-                        <td>プラスチック包装の少ない商品を選ぶ</td>
-                        <td>18%</td>
-                        <td>30%</td>
-                        <td>35%</td>
-                        <td>17%</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <div class="question">
-                <div class="question-label">(ア) 本文中の ( ア ) に入る最も適切な文を、次の1～4の中から一つ選び、その番号を書きなさい。(5点)</div>
-                <div class="choices">
-                    <div>1. That's why we should use more plastic products in our daily lives.</div>
-                    <div>2. This means plastic stays in the environment for a very long time.</div>
-                    <div>3. Therefore, scientists have stopped researching about plastic waste.</div>
-                    <div>4. This shows that plastic is the safest material for making bottles.</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-label">(イ) 本文中の下線部①～③のうち、次の内容を表しているものを一つ選び、その番号を書きなさい。(5点)</div>
-                <p style="margin-left: 20px; margin-top: 10px;">「研究者たちは、プラスチック廃棄物を減らすために、植物由来の素材を使用している。」</p>
-            </div>
-            
-            <div class="question">
-                <div class="question-label">(ウ) 次の1～8の文のうち、本文の内容に合っているものを二つ選び、その番号を書きなさい。(5点)</div>
-                <div class="choices">
-                    <div>1. Yui first became interested in plastic waste after she saw plastic on a beach last summer.</div>
-                    <div>2. According to Graph 1, Germany produced more plastic waste than China in 2020.</div>
-                    <div>3. Sea animals can easily find the difference between plastic and real food.</div>
-                    <div>4. Biodegradable plastic takes the same time to break down as regular plastic.</div>
-                    <div>5. Scientists in Japan found bacteria that can eat plastic in 2016.</div>
-                    <div>6. According to Graph 2, more than half of the students use reusable water bottles every day.</div>
-                    <div>7. Yui thinks that only scientists can solve the plastic waste problem.</div>
-                    <div>8. Graph 2 shows that 18% of students always choose products with less plastic packaging.</div>
-                </div>
-            </div>
+            <p><strong>① Robotics Workshop (10:00 a.m. - 12:00 p.m.)</strong><br>
+            - Learn how to build and program simple robots<br>
+            - Work in groups to create your own robot<br>
+            - Take home a small robot kit<br>
+            - Cost: 500 yen per person<br>
+            - Capacity: 30 people<br>
+            - Recommended for: Students interested in technology and engineering</p>
+
+            <p><strong>② Amazing Chemistry Show (2:00 p.m. - 4:00 p.m.)</strong><br>
+            - Watch exciting chemistry experiments performed by university professors<br>
+            - Learn about chemical reactions in our daily life<br>
+            - Participate in a simple experiment<br>
+            - Cost: 300 yen per person<br>
+            - Capacity: 50 people<br>
+            - Recommended for: Students interested in chemistry and science</p>
+
+            <p><strong>③ Journey to Space Presentation (4:30 p.m. - 6:00 p.m.)</strong><br>
+            - Learn about the solar system, planets, and space exploration<br>
+            - Watch beautiful videos from space missions<br>
+            - Hear from an astronomer who has studied stars for 30 years<br>
+            - Cost: 400 yen per person<br>
+            - Capacity: 40 people<br>
+            - Recommended for: Students interested in astronomy and space</p>
+
+            <p style="background: #ffeb3b; padding: 10px; margin: 15px 0;"><strong>Special Offer:</strong><br>
+            Join 2 or more programs and receive a free science book!<br>
+            (Book title: "100 Amazing Science Facts for Young Scientists")</p>
+
+            <p><strong>How to Register:</strong><br>
+            Visit our website at www.kamome-science.jp<br>
+            Registration deadline: March 10th</p>
+
+            <p style="text-align: center; margin-top: 15px;"><strong>Spots are limited! Register early!</strong></p>
         </div>
 
-        <!-- 問7 -->
-        <div class="section" style="page-break-before: always;">
-            <div class="section-title">問7　長文読解（資料活用）【配点10点】</div>
-            
-            <p style="margin-bottom: 15px;">次は、TakuとMeiが環境科学の展示会について話している対話文と、展示会のポスターです。これらを読んで、あとの(ア)・(イ)の問いに答えなさい。</p>
-            
-            <div class="passage">
-                <p><strong>Taku:</strong> Hi, Mei! Look at this poster. There's a special exhibition about environmental science next Saturday at City Hall.</p>
-                
-                <p><strong>Mei:</strong> Sounds interesting! What time does it start?</p>
-                
-                <p><strong>Taku:</strong> It opens at 10 a.m. and closes at 5 p.m. I want to see the workshop about solar energy. It starts at 11 a.m. and runs for 90 minutes.</p>
-                
-                <p><strong>Mei:</strong> That sounds great! But I'm also interested in the lecture about clean water technology. Let me check... Oh, it's at 1:30 p.m. and lasts for one hour.</p>
-                
-                <p><strong>Taku:</strong> Perfect! We can go to both. After your lecture, we could watch the documentary film about climate change. It starts at 3 p.m.</p>
-                
-                <p><strong>Mei:</strong> Wait, how long is the film?</p>
-                
-                <p><strong>Taku:</strong> It says here... 75 minutes. So it'll finish at 4:15 p.m.</p>
-                
-                <p><strong>Mei:</strong> That's good. But we should also visit the experiment corner. According to the poster, we need to make a reservation for that, and it's only for students who are 15 years old or older.</p>
-                
-                <p><strong>Taku:</strong> I'm 16 and you're 15, so we're both OK. Let's make a reservation when we arrive. By the way, do we need to pay an entrance fee?</p>
-                
-                <p><strong>Mei:</strong> Let me see... It says the entrance is free for students! But we need to bring our student ID cards.</p>
-                
-                <p><strong>Taku:</strong> Great! Oh, and there's also a special exhibition about space exploration on the second floor. It's open all day.</p>
-                
-                <p><strong>Mei:</strong> Wonderful! We have time before the workshop starts at 11. We could see that first.</p>
-                
-                <p><strong>Taku:</strong> Good idea! So, our plan is: space exhibition first, then your workshop at 11, my lecture at 1:30, the film at 3, and finally the experiment corner if we have time.</p>
-                
-                <p><strong>Mei:</strong> Actually, you have the workshop at 11, not me! I want to go to the lecture at 1:30.</p>
-                
-                <p><strong>Taku:</strong> Oh, you're right! I got confused. OK, let's meet at the entrance at 9:45 a.m. That way we'll have 15 minutes before it opens.</p>
-                
-                <p><strong>Mei:</strong> Sounds perfect!</p>
-            </div>
-            
-            <div class="poster">
-                <div class="poster-title">Environmental Science Exhibition</div>
-                
-                <div class="poster-info">
-                    <p><strong>Date:</strong> Next Saturday</p>
-                    <p><strong>Location:</strong> City Hall (1F & 2F)</p>
-                    <p><strong>Time:</strong> 10:00 a.m. - 5:00 p.m.</p>
-                </div>
-                
-                <div class="poster-section">
-                    <h4>【1st Floor】Program Schedule:</h4>
-                    <div class="poster-item">• <strong>10:00-11:30</strong> Workshop: Solar Energy Basics (Room A)</div>
-                    <div class="poster-item">• <strong>11:00-12:30</strong> Workshop: Recycling Techniques (Room B)</div>
-                    <div class="poster-item">• <strong>1:30-2:30</strong> Lecture: Clean Water Technology (Room A)</div>
-                    <div class="poster-item">• <strong>2:00-3:00</strong> Lecture: Forest Conservation (Room B)</div>
-                    <div class="poster-item">• <strong>3:00-4:15</strong> Documentary Film: "Our Changing Climate" (Main Hall)</div>
-                    <div class="poster-item">• <strong>10:00-5:00</strong> Experiment Corner (Room C) ★Reservation required, Ages 15+</div>
-                </div>
-                
-                <div class="poster-section">
-                    <h4>【2nd Floor】</h4>
-                    <div class="poster-item">• <strong>10:00-5:00</strong> Special Exhibition: Space Exploration</div>
-                </div>
-                
-                <div class="poster-section">
-                    <h4>Important Information:</h4>
-                    <div class="poster-item">• <strong>Entrance Fee:</strong> Free for students (Student ID required)</div>
-                    <div class="poster-item">• <strong>Reservation:</strong> Experiment Corner requires advance reservation</div>
-                    <div class="poster-item">• <strong>Age Limit:</strong> Some activities are restricted to visitors aged 15 and above</div>
-                    <div class="poster-item">• <strong>Facilities:</strong> Cafeteria available on 1st floor (11:30 a.m. - 3:00 p.m.)</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-label">(ア) TakuとMeiが見る予定のイベントを、時間順に正しく並べたものを、次の1～4の中から一つ選び、その番号を書きなさい。(5点)</div>
-                <div class="choices">
-                    <div>1. Space Exhibition → Workshop (Solar Energy) → Lecture (Clean Water) → Documentary Film</div>
-                    <div>2. Workshop (Solar Energy) → Space Exhibition → Lecture (Clean Water) → Documentary Film</div>
-                    <div>3. Space Exhibition → Lecture (Clean Water) → Workshop (Solar Energy) → Documentary Film</div>
-                    <div>4. Workshop (Solar Energy) → Lecture (Clean Water) → Space Exhibition → Documentary Film</div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <div class="question-label">(イ) 次の1~4の文のうち、対話文とポスターの内容から正しいと言えるものを一つ選び、その番号を書きなさい。(5点)</div>
-                <div class="choices">
-                    <div>1. Taku and Mei need to pay money to enter the exhibition because they are high school students.</div>
-                    <div>2. The workshop about solar energy will finish before the lecture about clean water technology starts.</div>
-                    <div>3. Taku and Mei can eat lunch at the cafeteria after watching the documentary film.</div>
-                    <div>4. Both Taku and Mei are old enough to use the experiment corner at the exhibition.</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 解答 -->
-        <div class="answer-section" style="page-break-before: always;">
-            <h3>■ 解答と配点</h3>
-            <p><strong>問6</strong></p>
-            <p style="margin-left: 20px;">(ア) <strong>2</strong> (5点)</p>
-            <p style="margin-left: 20px;">(イ) <strong>②</strong> (5点)</p>
-            <p style="margin-left: 20px;">(ウ) <strong>1と5</strong> または <strong>1と6</strong> または <strong>1と8</strong> または <strong>5と6</strong> または <strong>5と8</strong> または <strong>6と8</strong> (完答で5点)</p>
-            <p style="margin-top: 15px;"><strong>問7</strong></p>
-            <p style="margin-left: 20px;">(ア) <strong>1</strong> (5点)</p>
-            <p style="margin-left: 20px;">(イ) <strong>2</strong> (5点)</p>
-        </div>
-
-        <!-- 語注 -->
         <div class="vocab">
-            <h3>■ 語注</h3>
-            <div class="vocab-list">
-                <div class="vocab-item">• plastic waste: プラスチック廃棄物</div>
-                <div class="vocab-item">• shocked: 衝撃を受けた</div>
-                <div class="vocab-item">• marine animals: 海洋動物</div>
-                <div class="vocab-item">• by mistake: 間違って</div>
-                <div class="vocab-item">• biodegradable: 生分解性の</div>
-                <div class="vocab-item">• sugarcane: サトウキビ</div>
-                <div class="vocab-item">• eco-friendly: 環境にやさしい</div>
-                <div class="vocab-item">• bacteria: バクテリア、細菌</div>
-                <div class="vocab-item">• organism: 生物</div>
-                <div class="vocab-item">• packaging: 包装</div>
-                <div class="vocab-item">• reusable: 再利用可能な</div>
-                <div class="vocab-item">• exhibition: 展示会</div>
-                <div class="vocab-item">• workshop: ワークショップ、実習</div>
-                <div class="vocab-item">• solar energy: 太陽エネルギー</div>
-                <div class="vocab-item">• documentary: ドキュメンタリー</div>
-                <div class="vocab-item">• climate change: 気候変動</div>
-                <div class="vocab-item">• reservation: 予約</div>
-                <div class="vocab-item">• entrance fee: 入場料</div>
-                <div class="vocab-item">• space exploration: 宇宙探査</div>
-                <div class="vocab-item">• conservation: 保全</div>
+            ＊bulletin board: 掲示板　robotics: ロボット工学　program: プログラミングする　opportunity: 機会<br>
+            cancel: キャンセルする　recital: 発表会　presentation: 発表　bonus: 特典　register: 登録する<br>
+            spots: 席　taken: 取られた　Capacity: 定員　experiments: 実験　exploration: 探査　astronomer: 天文学者
+        </div>
+
+        <p style="margin-top: 20px;"><strong>Question:</strong> How much will Yuki and Emma pay in total for all the programs they will join together?</p>
+        <div class="choices">
+            <div>1. 800 yen</div>
+            <div>2. 900 yen</div>
+            <div>3. 1,000 yen</div>
+            <div>4. 1,200 yen</div>
+            <div>5. 1,300 yen</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="question-section" style="background: white; border: 1px solid #333; padding: 20px; margin: 20px 0;">
+        <h3 style="margin-top: 0;">イ</h3>
+        <div class="english-text">
+            <p>Takeshi is a high school student who is very interested in science, especially biology. He loves studying animals and plants, and he often watches documentaries about nature. His dream is to become a marine biologist and study ocean animals. During spring vacation, he wants to join a special science program. He found information about a Summer Science Camp on the Kamome Science Museum's website, and he is very excited about it. However, he has some questions, so he decided to send an email to the museum.</p>
+
+            <p><strong>Email from Takeshi:</strong></p>
+
+            <div style="border: 1px solid #666; padding: 15px; margin: 15px 0; background: #f0f0f0;">
+                <p><strong>To:</strong> info@kamome-science-museum.jp<br>
+                <strong>From:</strong> takeshi.yamada@email.jp<br>
+                <strong>Date:</strong> June 5, 2025, 3:45 p.m.<br>
+                <strong>Subject:</strong> Questions about Summer Science Camp</p>
+
+                <p>Dear Kamome Science Museum Staff,</p>
+
+                <p>Hello, my name is Takeshi Yamada, and I am a second-year student at Kamome High School. I saw information about your Summer Science Camp on your website, and I'm very interested in joining. I have loved studying about the ocean and sea animals since I was a small child. When I was in elementary school, I read many books about dolphins, whales, and coral reefs. Last year, I visited Okinawa with my family, and we went snorkeling. I saw many beautiful fish and other sea animals. That experience made me even more interested in marine life. Now I really want to learn more about marine biology, and I think your camp would be a wonderful opportunity for me.</p>
+
+                <p>However, I have three questions before I register:</p>
+
+                <p>1. I am very interested in the Marine Biology Program. I will be 16 years old in August when the camp happens. Can I join this program? On your website, it says the program is for students aged 15-18, but I want to make sure that 16-year-old students are allowed to participate.</p>
+
+                <p>2. I have a younger brother named Hiroshi. He is 12 years old and is in the sixth grade of elementary school. He is also very interested in science, especially physics and chemistry. He wants to join the Basic Science Program. I read that elementary school students need to come with a family member who is at least 18 years old. I am only 16, so I cannot be his guardian, right? Our parents both work, and they cannot take time off during the camp dates. However, our grandfather, who is 68 years old, lives near our house and has a lot of free time. Can he bring Hiroshi to the camp and stay with him? My grandfather is very healthy and active, and he loves spending time with Hiroshi.</p>
+
+                <p>3. If both my brother and I join the programs, will we get any kind of discount? Our family wants to support our interest in science, but science camps can be expensive. If there is a family discount, it would be very helpful for us. Also, if our grandfather needs to pay anything to accompany my brother, please let me know.</p>
+
+                <p>I am really looking forward to this camp. It would be an amazing experience for both my brother and me. Thank you very much for your time, and I'm looking forward to your reply.</p>
+
+                <p>Best regards,<br>
+                Takeshi Yamada</p>
+            </div>
+
+            <p><strong>Reply from the Museum:</strong></p>
+
+            <div style="border: 1px solid #666; padding: 15px; margin: 15px 0; background: #f0f0f0;">
+                <p><strong>To:</strong> takeshi.yamada@email.jp<br>
+                <strong>From:</strong> info@kamome-science-museum.jp<br>
+                <strong>Date:</strong> June 6, 2025, 10:15 a.m.<br>
+                <strong>Subject:</strong> Re: Questions about Summer Science Camp</p>
+
+                <p>Dear Takeshi,</p>
+
+                <p>Thank you very much for your interest in our Summer Science Camp! We are always happy to hear from students who are passionate about science. I'm glad to hear about your interest in marine biology. It's wonderful that you already have such clear goals for your future. Let me answer your questions one by one.</p>
+
+                <p>1. Yes, you can definitely join the Marine Biology Program! This program is designed for students aged 15-18, and since you will be 16 years old in August, you are exactly the right age. This program is very popular, and we usually have about 25-30 participants. You will have the opportunity to visit Kamome Aquarium, study different types of sea animals, and learn from marine biologists who work there. You'll also do some hands-on activities like examining sea water under microscopes and learning about ocean conservation.</p>
+
+                <p>2. Yes, your brother can join the Basic Science Program, and your grandfather can definitely accompany him! We are happy to have grandparents bring their grandchildren to the camp. Family members who are 18 or older are welcome to be guardians for elementary school students. However, there is one important thing I need to explain. If you're 16, you cannot be his official guardian for the program. Your grandfather (or another adult family member aged 18 or older) will need to stay at the community center during the program hours. We have a comfortable waiting room with free Wi-Fi, magazines, and refreshments where family members can wait. Some grandparents bring books to read, and some use their laptops to work. The waiting room has large windows, so they can sometimes watch the activities from there. Your grandfather does not need to pay any fee—only participants need to pay.</p>
+
+                <p>3. Yes, we do offer a family discount! If two or more family members register for different programs, each person will get a 10% discount on their program fee. This discount applies to any family members, including siblings, parents, grandparents, cousins, etc. So if you join the Marine Biology Program (18,000 yen) and your brother joins the Basic Science Program (15,000 yen), you will each get a 10% discount. That means you will pay 16,200 yen instead of 18,000 yen, and your brother will pay 13,500 yen instead of 15,000 yen. The total cost for both of you will be 29,700 yen instead of 33,000 yen. That's a savings of 3,300 yen! To get this discount, you need to register at the same time and mention that you are family members in the registration form.</p>
+
+                <p>I hope this information is helpful! Please check our website for more details about each program and to register. The registration deadline is July 15th, but programs often fill up before that, so I recommend registering as soon as possible. If you have any other questions, please don't hesitate to contact us again.</p>
+
+                <p>We look forward to seeing you and your brother at the camp!</p>
+
+                <p>Best regards,<br>
+                Yuki Tanaka<br>
+                Program Coordinator<br>
+                Kamome Science Museum</p>
             </div>
         </div>
+
+        <div style="border: 2px solid #000; padding: 20px; margin: 20px 0; background: #fffef0;">
+            <h2 style="text-align: center; margin: 0 0 15px 0;">KAMOME SCIENCE MUSEUM</h2>
+            <h3 style="text-align: center; margin: 0 0 20px 0;">Summer Science Camp 2025</h3>
+            
+            <p style="text-align: center; font-weight: bold;">Discover the Wonders of Science This Summer!</p>
+
+            <p>Our Summer Science Camp offers exciting, hands-on learning experiences for students of all ages. Each program runs for three days and includes lectures, experiments, field trips, and group activities. All materials and lunch are included in the program fee.</p>
+
+            <h4 style="margin: 20px 0 10px 0;">Program A: Basic Science Program</h4>
+            <p>- For elementary school students (ages 10-12)<br>
+            - Learn basic physics and chemistry through fun experiments<br>
+            - Topics include: light and sound, simple machines, chemical reactions, states of matter<br>
+            - Make your own volcano, build a simple motor, create colorful chemical reactions<br>
+            - Date: August 5-7 (3 days, 9:00 a.m. - 3:00 p.m. each day)<br>
+            - Cost: 15,000 yen per student<br>
+            - Maximum participants: 20 students<br>
+            - Note: Elementary school students must be accompanied by a family member aged 18 or older. Family members do not need to pay a fee and can wait in our comfortable waiting room.</p>
+
+            <h4 style="margin: 20px 0 10px 0;">Program B: Marine Biology Program</h4>
+            <p>- For junior high and high school students (ages 15-18)<br>
+            - Study ocean life and ecosystems<br>
+            - Visit Kamome Aquarium and meet marine biologists<br>
+            - Learn about fish, coral reefs, sea turtles, and ocean conservation<br>
+            - Examine sea water samples under microscopes<br>
+            - Dissect fish to learn about their anatomy (optional)<br>
+            - Date: August 10-12 (3 days, 9:00 a.m. - 4:00 p.m. each day)<br>
+            - Cost: 18,000 yen per student<br>
+            - Maximum participants: 30 students<br>
+            - Field trip to Kamome Aquarium on Day 2 (transportation provided)</p>
+
+            <h4 style="margin: 20px 0 10px 0;">Program C: Advanced Physics Program</h4>
+            <p>- For high school students (ages 16-18)<br>
+            - Study advanced physics topics including mechanics, electricity, and magnetism<br>
+            - Visit university research laboratories<br>
+            - Learn from university professors and graduate students<br>
+            - Conduct sophisticated experiments with advanced equipment<br>
+            - Topics include: Newton's laws, circuits, electromagnetic waves, quantum physics basics<br>
+            - Date: August 15-17 (3 days, 9:00 a.m. - 4:30 p.m. each day)<br>
+            - Cost: 20,000 yen per student<br>
+            - Maximum participants: 25 students<br>
+            - Field trip to Kamome University Physics Lab on Day 3 (transportation provided)</p>
+
+            <p style="background: #ffeb3b; padding: 10px; margin: 15px 0;"><strong>Family Discount:</strong><br>
+            If two or more family members register for different programs, each person gets a 10% discount on their program fee. To receive this discount, all family members must register at the same time using our online registration form. In the form, please indicate that you are registering as a family group and list all participants' names.</p>
+
+            <p><strong>What's Included:</strong><br>
+            - All materials and equipment for experiments<br>
+            - Lunch for all three days<br>
+            - Snacks and drinks during breaks<br>
+            - A camp T-shirt<br>
+            - A certificate of completion<br>
+            - Transportation for field trips (Programs B and C)</p>
+
+            <p><strong>Registration Information:</strong><br>
+            - Registration opens: June 1, 2025<br>
+            - Registration deadline: July 15, 2025<br>
+            - Register online at: www.kamome-science-museum.jp/camp<br>
+            - Programs may fill up before the deadline, so early registration is recommended!</p>
+
+            <p><strong>Contact Us:</strong><br>
+            If you have any questions, please email us at info@kamome-science-museum.jp or call us at 045-123-4567 (weekdays 9:00 a.m. - 5:00 p.m.)</p>
+        </div>
+
+        <div class="vocab">
+            ＊documentaries: ドキュメンタリー　marine biologist: 海洋生物学者　snorkeling: シュノーケリング<br>
+            physics: 物理学　guardian: 保護者　grandfather: 祖父　discount: 割引　refreshments: 軽食<br>
+            volcano: 火山　motor: モーター　Note: 注意　accompanied: 同伴される　ecosystems: 生態系<br>
+            coral reefs: サンゴ礁　Dissect: 解剖する　anatomy: 解剖学　mechanics: 力学　magnetism: 磁気<br>
+            laboratories: 研究所　sophisticated: 高度な　circuits: 回路　electromagnetic: 電磁気の<br>
+            quantum physics: 量子物理学
+        </div>
+
+        <p style="margin-top: 20px;"><strong>Question:</strong> If Takeshi, his brother, and their grandfather go to the camp, how much will Takeshi and his brother pay in total for their programs? (Remember that the grandfather doesn't need to pay anything.)</p>
+        <div class="choices">
+            <div>1. 27,000 yen</div>
+            <div>2. 29,700 yen</div>
+            <div>3. 30,000 yen</div>
+            <div>4. 33,000 yen</div>
+            <div>5. 35,100 yen</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="question-number">問 8</div>
+    <p>次の英文を読んで、あとのア~ウの問いに答えなさい。</p>
+
+    <div class="english-text">
+        <p>Mika and Jun are Kamome High School students who are in the same science class. Both of them are very interested in environmental issues. Ms. Johnson is their science teacher, and she has been teaching at Kamome High School for five years. She studied environmental science at university and worked as a researcher before becoming a teacher. Ms. Johnson is known for giving interesting projects to her students. This semester, she asked her students to work in groups to research environmental problems and present their findings to the class.</p>
+
+        <p>Mika and Jun decided to work together on a group project about climate change. They chose this topic because they both think it's one of the most important problems facing the world today. They have been researching for two weeks, reading articles online, watching videos, and looking at scientific data. One day after school, they are working in the science room, and they are looking at some graphs they found. They are a bit confused about how to interpret the data, so they decide to ask Ms. Johnson for help.</p>
+
+        <p><strong>Ms. Johnson</strong>: Hi, Mika and Jun. I can see you're working hard on your project. How is it going? Have you found some interesting information?</p>
+
+        <p><strong>Mika</strong>: Yes, we have, Ms. Johnson. We're researching climate change and its effects on Japan. We've found a lot of information, and it's really interesting, but also a little scary. We found some graphs with scientific data, but we're not completely sure how to interpret all of it correctly. Could you help us understand it better?</p>
+
+        <p><strong>Ms. Johnson</strong>: Of course! I'd be happy to help. Climate change is a very important topic, and I'm glad you chose it. What kind of data did you find? Show me what you're looking at.</p>
+
+        <p><strong>Jun</strong>: Well, first we found information about temperature changes in Japan over the past 120 years. Look at ① Graph 1. It shows the average temperature in Tokyo from 1900 to 2020. According to this graph, the temperature in 1900 was about 14.5°C. Then it stayed between 14.5°C and 15.5°C for many decades, from 1900 until about 1980. But after 1980, something changed. The temperature started to rise much more quickly. By 2000, it had risen to about 16.0°C, and by 2020, it reached about 16.5°C. That's an increase of about 1.0°C in just 40 years!</p>
+
+        <p><strong>Ms. Johnson</strong>: That's very good observation, Jun. The data you found is accurate. Tokyo's temperature has indeed increased, especially in recent decades. This pattern is not unique to Tokyo—it's happening in many cities around the world. What do you think this means?</p>
+
+        <p><strong>Mika</strong>: I think it means Tokyo is getting warmer over time. One degree might not sound like a lot, but I read in an article that even small changes in average temperature can have big effects on weather, plants, animals, and people's lives. But we're not sure if this warming is happening only in Tokyo, or if it's happening in other parts of Japan too. Tokyo is a huge city with millions of people, so maybe the temperature is rising faster there because of all the buildings, cars, and people. I learned about something called the "urban heat island effect," where cities are warmer than the countryside because of human activities.</p>
+
+        <p><strong>Ms. Johnson</strong>: Excellent point, Mika! The urban heat island effect is real, and it does make cities like Tokyo warmer than rural areas. But let me ask you this: Did you find any more information about other cities in Japan?</p>
+
+        <p><strong>Jun</strong>: Yes, we did! That's actually the next thing we wanted to show you. Look at ② Graph 2. This graph shows temperature changes in four different Japanese cities from 1980 to 2020. We looked at Tokyo, Osaka, Sapporo, and Fukuoka. These cities are in different parts of Japan—Tokyo is in the Kanto region, Osaka is in the Kansai region, Sapporo is in Hokkaido in the north, and Fukuoka is in Kyushu in the south. In Tokyo, the temperature increased by 1.2°C during these 40 years. In Osaka, another big city, it increased by 1.0°C. Sapporo is much farther north and much colder than Tokyo, but even there, the temperature increased by 1.3°C—that's even more than Tokyo! And in Fukuoka, it increased by 0.9°C.</p>
+
+        <p><strong>Mika</strong>: So when we look at this data, we can conclude that ( ① ). This isn't just a problem for Tokyo. It's happening all across Japan, from north to south. Even Sapporo, which is in Hokkaido where it's very cold in winter, is getting warmer.</p>
+
+        <p><strong>Ms. Johnson</strong>: Exactly! Climate change is a global problem, not just a local one. It's affecting the whole country, and in fact, it's affecting the whole planet. Now, let me ask you another question. Do you know what causes climate change? What makes the Earth's temperature increase?</p>
+
+        <p><strong>Jun</strong>: Yes, I've been reading about this. I read that <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>. When people burn fossil fuels like coal, oil, and natural gas to make electricity, heat buildings, or run cars, trucks, and airplanes, they release a gas called carbon dioxide into the air. There are also other gases like methane and nitrous oxide that are released from farming and other activities. These gases go up into the atmosphere—the layer of air around Earth—and they trap heat. The heat from the sun comes down to Earth, and normally some of it would go back out into space. But these gases act like a blanket, keeping the heat close to Earth. This makes Earth's temperature go up.</p>
+
+        <p><strong>Ms. Johnson</strong>: That's absolutely right, Jun! You explained it very clearly. This process is called the "greenhouse effect." It's called this because these gases work like the glass in a greenhouse. Have you ever been inside a greenhouse? The glass lets sunlight in, but it doesn't let the heat escape easily, so inside the greenhouse it gets very warm. The atmosphere works in a similar way. Carbon dioxide and other gases act like a blanket or like the glass in a greenhouse, keeping heat close to Earth. Without any greenhouse effect at all, Earth would actually be too cold for humans to live on—it would be about 30 degrees colder! But now we have too much of these gases because of human activities, and that's making Earth too warm.</p>
+
+        <p><strong>Mika</strong>: That makes sense. So the problem isn't the greenhouse effect itself—we actually need some greenhouse effect. The problem is that we're making too much carbon dioxide and other greenhouse gases by burning fossil fuels.</p>
+
+        <p><strong>Ms. Johnson</strong>: Exactly! You've got it. Now, let me give you some more information that might help with your project. About 75% of the carbon dioxide that humans put into the atmosphere comes from burning fossil fuels. The other 25% comes mostly from deforestation—cutting down forests. Trees absorb carbon dioxide from the air, so when we cut down forests, there are fewer trees to absorb the carbon dioxide. This is a big problem in places like the Amazon rainforest in South America.</p>
+    </div>
+
+    <div class="vocab">
+        ＊climate change: 気候変動　interpret: 解釈する　temperature: 気温　average: 平均の　accurate: 正確な<br>
+        unique: 独特の　urban heat island: ヒートアイランド　global: 地球規模の　fossil fuels: 化石燃料<br>
+        release: 放出する　carbon dioxide: 二酸化炭素　methane: メタン　nitrous oxide: 亜酸化窒素<br>
+        atmosphere: 大気　trap: 閉じ込める　greenhouse effect: 温室効果　deforestation: 森林伐採
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="english-text">
+        <p>One week later, Mika and Jun have done much more research. They are meeting with Ms. Johnson again to discuss what they learned. They have prepared several pages of notes and more graphs to show her. They are excited to share their findings.</p>
+
+        <p><strong>Ms. Johnson</strong>: Hi again, Mika and Jun! It's good to see you. Have you found more information for your project? You both look excited!</p>
+
+        <p><strong>Mika</strong>: Yes, Ms. Johnson! We've been working really hard this week. We learned so much about the effects of climate change on Japan, and we're starting to understand why this is such a serious problem. We want to share what we learned with you.</p>
+
+        <p><strong>Jun</strong>: We found information about several different effects. ( ② ), Japan is experiencing more extreme weather events. For example, we found data showing that there are more heavy rainstorms and stronger typhoons than before. In July 2018, there was a huge rainstorm in western Japan that caused terrible flooding. More than 200 people died in that disaster. Scientists say that climate change is making these extreme weather events more common and more severe.</p>
+
+        <p><strong>Ms. Johnson</strong>: That's right. The 2018 flooding in western Japan was indeed a terrible disaster. I remember it well. When the atmosphere is warmer, it can hold more water vapor, which means there can be heavier rainstorms. This is one of the most dangerous effects of climate change.</p>
+
+        <p><strong>Mika</strong>: We also found information about hot weather. The number of very hot days in summer is increasing across Japan. Look at this data we found. In Tokyo during the 1990s, there were about 10 days per year on average when the temperature went over 35°C. We call these days "extremely hot days" in English—in Japanese we say "猛暑日" (moushobi). But in the 2010s, from 2010 to 2019, there were about 20 days per year with temperatures over 35°C. That's twice as many! These extremely hot days are dangerous, especially for elderly people and small children. Many people get heatstroke and have to go to the hospital.</p>
+
+        <p><strong>Jun</strong>: And it's not just Tokyo. We found that cities all across Japan are experiencing more extremely hot days. In Osaka, Nagoya, Fukuoka—everywhere is getting hotter in summer. Some days the temperature even goes over 40°C! That's almost as hot as a very hot bath. It's dangerous to be outside for too long on days like that.</p>
+
+        <p><strong>Ms. Johnson</strong>: You're absolutely right. This is a very serious problem. The number of people who get heatstroke has been increasing every year. That's why on very hot days, the government sends out warnings telling people to stay inside in air-conditioned rooms and to drink lots of water. What other effects did you find?</p>
+
+        <p><strong>Mika</strong>: Climate change is also affecting Japanese agriculture—the growing of food crops. We learned that many crops need specific temperature and weather conditions to grow well. Some crops like cool weather, and some like warm weather. Because of warmer temperatures, some crops that need cool weather are becoming difficult to grow in certain areas. For example, we learned about rice, which is Japan's most important crop. Rice grows better when it's cool during certain parts of the growing season, especially when the rice grains are forming. But because of warmer temperatures, ( ③ ). In some areas, the rice grains don't develop properly, or they become smaller. This affects both the amount of rice that farmers can produce and the quality of the rice.</p>
+
+        <p><strong>Jun</strong>: We also learned that some areas that used to be too cold to grow certain fruits are now warm enough. For example, in some parts of Tohoku and Hokkaido, farmers are now starting to grow fruits like peaches and cherries that they couldn't grow before because it was too cold. So climate change has some effects that might seem positive, but overall, it's causing many more problems than benefits for Japanese agriculture.</p>
+
+        <p><strong>Ms. Johnson</strong>: That's very thorough research. Agriculture is indeed being affected in complex ways by climate change. It's not just about temperature, either—changes in rainfall patterns also affect crops. Some areas are getting too much rain, and others are getting too little. What else did you learn?</p>
+
+        <p><strong>Jun</strong>: We also learned that climate change is affecting the ocean around Japan and the fish that live in it. The water temperature in the seas around Japan is rising, and this is changing where different species of fish live. Fish like to live in water that has the right temperature for them—it's like how you prefer to take a bath that's not too hot and not too cold. When the ocean gets warmer, fish migrate to different areas to find water that has the temperature they prefer. Some fish that people in Japan like to eat, like salmon and mackerel, are moving to different areas than where they used to be found. This makes it harder for Japanese fishermen to catch these fish in their traditional fishing areas.</p>
+
+        <p><strong>Mika</strong>: We also read about coral bleaching. Do you know about that, Ms. Johnson? Coral reefs are very beautiful and important ecosystems in the ocean. Many fish and other sea animals live around coral reefs. But when ocean water becomes too warm, the coral becomes stressed and it turns white. This is called "bleaching." If the water stays warm for too long, the coral dies. This is happening to coral reefs around Okinawa and other islands in southern Japan. It's very sad because coral reefs are so beautiful and important for ocean life.</p>
+
+        <p><strong>Ms. Johnson</strong>: Yes, coral bleaching is a very serious problem, not just in Japan but all around the world. The Great Barrier Reef in Australia, which is the world's largest coral reef, has also been seriously damaged by bleaching. You've done excellent research on the effects of climate change. Now, let me ask you the most important question: What can we do about climate change? What solutions did you find?</p>
+
+        <p><strong>Mika</strong>: We've been thinking about that a lot. We found that there are many things that different groups can do. Governments can make laws to reduce carbon dioxide emissions—that means the amount of carbon dioxide that is released into the air. For example, the government can make rules that say cars must produce less carbon dioxide, or that power plants must use cleaner energy sources. The Japanese government has set a goal to reduce emissions by a certain percentage by 2030 and 2050, but some people say the government should do even more.</p>
+
+        <p><strong>Jun</strong>: Companies and businesses also have an important role to play. They can use more renewable energy instead of fossil fuels. Companies can install solar panels on their buildings, or they can buy electricity from wind farms. Some big Japanese companies like Toyota and Sony have already promised to use 100% renewable energy in the future. Companies can also make products that use less energy, like more efficient cars and appliances.</p>
+
+        <p><strong>Mika</strong>: And individuals—regular people like us—can help too! There are actually many things we can do in our daily lives. For example, people can save energy by using LED lights instead of old incandescent light bulbs. LED lights use about 75% less energy than old bulbs, and they last much longer too. People can turn off lights and appliances when they're not using them. Even small things like unplugging your phone charger when you're not charging your phone can save energy.</p>
+
+        <p><strong>Ms. Johnson</strong>: Those are all excellent ideas! I'm very impressed with your research. You've clearly put in a lot of effort, and you understand the problem and possible solutions very well. Remember, climate change is a big, complex problem, and there's no single easy solution. But if governments, companies, and individuals all work together, we can make a real difference. Every action counts, no matter how small it seems. Even just learning about climate change, like you've been doing, and sharing that knowledge with other people is valuable.</p>
+
+        <p><strong>Mika</strong>: Thank you, Ms. Johnson! We feel much more confident about our project now. We want to make a good presentation so that we can share what we learned with our classmates and help them understand why climate change is important.</p>
+
+        <p><strong>Jun</strong>: Yes! We're planning to make slides with graphs and pictures, and we'll explain everything clearly. We hope our presentation will help other students in our class learn about climate change and think about what they can do to help. Maybe some of them will start changing their daily habits to use less energy.</p>
+
+        <p><strong>Ms. Johnson</strong>: That's a wonderful goal! I'm sure your classmates will learn a lot from your presentation. I'm really proud of both of you for choosing such an important topic and working so hard on it. Keep up the excellent work, and if you have any more questions as you prepare your presentation, please don't hesitate to ask me.</p>
+
+        <p><strong>Mika</strong>: We will. Thank you so much for all your help, Ms. Johnson!</p>
+
+        <p><strong>Jun</strong>: Yes, thank you! You've helped us understand everything much better.</p>
+    </div>
+
+    <div class="vocab">
+        ＊extreme: 極端な　rainstorms: 豪雨　typhoons: 台風　flooding: 洪水　severe: 深刻な　vapor: 蒸気<br>
+        extremely hot days: 猛暑日　heatstroke: 熱中症　agriculture: 農業　crops: 農作物　grains: 穀物<br>
+        migrate: 移動する　salmon: サケ　mackerel: サバ　moving: 移動している　ecosystems: 生態系<br>
+        stressed: ストレスを受けた　laws: 法律　emissions: 排出　role: 役割　efficient: 効率的な<br>
+        LED: 発光ダイオード　incandescent: 白熱　charger: 充電器　gasoline: ガソリン　hybrid: ハイブリッド<br>
+        producing: 生産する　grain: 穀物　liters: リットル　climate: 気候　tofu: 豆腐　recycle: リサイクルする<br>
+        waste: 廃棄物　landfills: 埋立地　single-use: 使い捨ての　confident: 自信がある
+    </div>
+
+    <div class="question-section">
+        <h3>ア</h3>
+        <p>本文中の<span style="text-decoration: underline;">①</span>と<span style="text-decoration: underline;">②</span>が表す内容を、①はア群、②はイ群の中からそれぞれ選んだときの組み合わせとして最も適するものを、あとの1~9の中から一つ選び、その番号を答えなさい。</p>
+
+        <div style="margin: 20px 0;">
+            <p><strong>ア群</strong></p>
+            <p><strong>Graph 1: Average Temperature in Tokyo (1900-2020)</strong></p>
+
+            <div style="margin: 15px 0;">
+                <p><strong>A.</strong></p>
+                <pre style="font-family: monospace; background: #f5f5f5; padding: 10px;">
+Temperature (°C)
+17.0  |                                          ●
+16.5  |                                    ●●●●●●
+16.0  |                              ●●●●●
+15.5  |        ●●●●●●●●●●●●●●●
+15.0  |  ●●●●●
+14.5  |●●
+14.0  |____________________________________
+      1900  1920  1940  1960  1980  2000  2020</pre>
+                <p style="font-size: 9pt;">(温度は1900-1980年まで約14.5-15.5°Cで安定、その後急上昇)</p>
+            </div>
+
+            <div style="margin: 15px 0;">
+                <p><strong>B.</strong></p>
+                <pre style="font-family: monospace; background: #f5f5f5; padding: 10px;">
+Temperature (°C)
+17.0  |                                          ●
+16.5  |                                    ●●●●●●
+16.0  |                              ●●●●●
+15.5  |                        ●●●●●
+15.0  |                  ●●●●●
+14.5  |        ●●●●●●●
+14.0  |  ●●●●●
+13.5  |____________________________________
+      1900  1920  1940  1960  1980  2000  2020</pre>
+                <p style="font-size: 9pt;">(温度が1900年から2020年まで継続的に上昇)</p>
+            </div>
+
+            <div style="margin: 15px 0;">
+                <p><strong>C.</strong></p>
+                <pre style="font-family: monospace; background: #f5f5f5; padding: 10px;">
+Temperature (°C)
+17.0  |●●●●●
+16.5  |        ●●●●●●●
+16.0  |                  ●●●●●
+15.5  |                        ●●●●●
+15.0  |                              ●●●●●
+14.5  |                                    ●●●●●●
+14.0  |                                          ●
+13.5  |____________________________________
+      1900  1920  1940  1960  1980  2000  2020</pre>
+                <p style="font-size: 9pt;">(温度が1900年から2020年まで継続的に下降)</p>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0;">
+            <p><strong>イ群</strong></p>
+            <p><strong>Graph 2: Temperature Increase in Four Cities (1980-2020)</strong></p>
+
+            <div style="margin: 10px 0;">
+                <p><strong>X.</strong></p>
+                <table style="width: 80%;">
+                    <tr>
+                        <th>City</th>
+                        <th>Temperature Increase</th>
+                    </tr>
+                    <tr>
+                        <td>Tokyo</td>
+                        <td>1.2°C</td>
+                    </tr>
+                    <tr>
+                        <td>Osaka</td>
+                        <td>0.9°C</td>
+                    </tr>
+                    <tr>
+                        <td>Sapporo</td>
+                        <td>1.0°C</td>
+                    </tr>
+                    <tr>
+                        <td>Fukuoka</td>
+                        <td>1.3°C</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="margin: 10px 0;">
+                <p><strong>Y.</strong></p>
+                <table style="width: 80%;">
+                    <tr>
+                        <th>City</th>
+                        <th>Temperature Increase</th>
+                    </tr>
+                    <tr>
+                        <td>Tokyo</td>
+                        <td>1.2°C</td>
+                    </tr>
+                    <tr>
+                        <td>Osaka</td>
+                        <td>1.0°C</td>
+                    </tr>
+                    <tr>
+                        <td>Sapporo</td>
+                        <td>1.3°C</td>
+                    </tr>
+                    <tr>
+                        <td>Fukuoka</td>
+                        <td>0.9°C</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="margin: 10px 0;">
+                <p><strong>Z.</strong></p>
+                <table style="width: 80%;">
+                    <tr>
+                        <th>City</th>
+                        <th>Temperature Increase</th>
+                    </tr>
+                    <tr>
+                        <td>Tokyo</td>
+                        <td>0.9°C</td>
+                    </tr>
+                    <tr>
+                        <td>Osaka</td>
+                        <td>1.0°C</td>
+                    </tr>
+                    <tr>
+                        <td>Sapporo</td>
+                        <td>1.2°C</td>
+                    </tr>
+                    <tr>
+                        <td>Fukuoka</td>
+                        <td>1.3°C</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="choices">
+            <div>1. ①:A　②:X</div>
+            <div>2. ①:A　②:Y</div>
+            <div>3. ①:A　②:Z</div>
+            <div>4. ①:B　②:X</div>
+            <div>5. ①:B　②:Y</div>
+            <div>6. ①:B　②:Z</div>
+            <div>7. ①:C　②:X</div>
+            <div>8. ①:C　②:Y</div>
+            <div>9. ①:C　②:Z</div>
+        </div>
+    </div>
+
+    <div class="question-section">
+        <h3>イ</h3>
+        <p>本文中の<span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>の中に入れるのに最も適するものを、次の1~4の中から一つ選び、その番号を答えなさい。</p>
+        <div class="choices">
+            <div>1. renewable energy is the main cause of global warming and climate problems</div>
+            <div>2. human activities are the biggest cause of climate change in the world today</div>
+            <div>3. natural weather changes happen without any human influence or activities</div>
+            <div>4. the ocean temperature has nothing to do with climate change or global warming</div>
+        </div>
+    </div>
+
+    <div class="question-section">
+        <h3>ウ</h3>
+        <p>本文中の( ① )~( ③ )の中に、次のA~Cを意味が通るように入れるとき、その組み合わせとして最も適するものを、あとの1~6の中から一つ選び、その番号を答えなさい。</p>
+        <div style="margin: 15px 0;">
+            <p>A. the whole country is getting warmer, not just Tokyo or other big cities</p>
+            <p>B. Because of rising temperatures and more extreme weather events</p>
+            <p>C. the quality and quantity of rice in some areas has decreased</p>
+        </div>
+        <div class="choices">
+            <div>1. ①:A　②:B　③:C</div>
+            <div>2. ①:A　②:C　③:B</div>
+            <div>3. ①:B　②:A　③:C</div>
+            <div>4. ①:B　②:C　③:A</div>
+            <div>5. ①:C　②:A　③:B</div>
+            <div>6. ①:C　②:B　③:A</div>
+        </div>
+    </div>
+
+    <div class="question-section">
+        <h3>エ</h3>
+        <p>次のa~fの中から、本文の内容に合うものを二つ選んだときの組み合わせとして最も適するものを、あとの1~8の中から一つ選び、その番号を答えなさい。</p>
+        <div style="margin: 15px 0;">
+            <p>a. The temperature in Tokyo has stayed the same from 1900 to 2020 according to the data.</p>
+            <p>b. Carbon dioxide and other greenhouse gases trap heat in the atmosphere and make Earth warmer.</p>
+            <p>c. Climate change has no effect on Japanese agriculture, fishing, or coral reefs.</p>
+            <p>d. The number of extremely hot summer days in Tokyo has doubled from the 1990s to the 2010s.</p>
+            <p>e. Mika and Jun believe that only governments and companies can solve the problem of climate change.</p>
+            <p>f. Ms. Johnson believes that individual actions like saving energy cannot help fight climate change at all.</p>
+        </div>
+        <div class="choices">
+            <div>1. aとc</div>
+            <div>2. aとe</div>
+            <div>3. bとd</div>
+            <div>4. bとf</div>
+            <div>5. cとd</div>
+            <div>6. cとe</div>
+            <div>7. dとe</div>
+            <div>8. eとf</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>(問題は、これで終わりです。)</p>
+        <p style="margin-top: 10px;">Ⓒ英</p>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: #f0f0f0; border: 2px solid #333;">
+        <h2 style="text-align: center;">解答</h2>
+        
+        <h3>問 6</h3>
+        <p><strong>ア:</strong> 2</p>
+        <p><strong>イ:</strong> 1</p>
+        <p><strong>ウ:</strong> 6</p>
+
+        <h3>問 7</h3>
+        <p><strong>ア:</strong> 3</p>
+        <p><strong>イ:</strong> 2</p>
+
+        <h3>問 8</h3>
+        <p><strong>ア:</strong> 2</p>
+        <p><strong>イ:</strong> 2</p>
+        <p><strong>ウ:</strong> 1</p>
+        <p><strong>エ:</strong> 3</p>
     </div>
 
     <script>
-        // 印刷前の確認
-        window.onbeforeprint = function() {
-            console.log('PDFとして保存されます');
+        // Print styling
+        window.onload = function() {
+            document.title = "神奈川県公立高校_英語入試_科学テーマ長文問題";
         };
     </script>
 </body>
