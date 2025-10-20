@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神奈川県公立高校入試 英語長文問題</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'MS Gothic', 'Yu Gothic', sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background: white;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #333;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .passage {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #4a90e2;
+            margin-bottom: 20px;
+            line-height: 2;
+        }
+        
+        .passage p {
+            margin-bottom: 15px;
+            text-indent: 1em;
+        }
+        
+        .passage p:first-child {
+            text-indent: 0;
+            font-weight: bold;
+        }
+        
+        .underline {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .blank {
+            display: inline-block;
+            min-width: 80px;
+            border-bottom: 2px solid #333;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        
+        table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        th {
+            background: #e0e0e0;
+            font-weight: bold;
+        }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #4a90e2;
+        }
+        
+        .question-label {
+            font-weight: bold;
+            color: #4a90e2;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .choices {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .choices div {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .answer-section {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-top: 30px;
+            border: 2px dashed #666;
+        }
+        
+        .answer-section h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .vocab {
+            background: #fff9e6;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .vocab h3 {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .vocab-list {
+            column-count: 2;
+            column-gap: 20px;
+        }
+        
+        .vocab-item {
+            margin-bottom: 5px;
+            font-size: 13px;
+            break-inside: avoid;
+        }
+        
+        .poster {
+            background: #e8f4f8;
+            padding: 20px;
+            border: 3px solid #4a90e2;
+            margin: 20px 0;
+        }
+        
+        .poster-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #4a90e2;
+        }
+        
+        .poster-info {
+            margin-bottom: 15px;
+        }
+        
+        .poster-section {
+            margin-top: 15px;
+        }
+        
+        .poster-section h4 {
+            background: #4a90e2;
+            color: white;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .poster-item {
+            margin-left: 15px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+        
+        .download-btn {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        @media print {
+            .button-container {
+                display: none;
+            }
+            
+            body {
+                padding: 0;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="download-btn" onclick="window.print()">📄 PDFとして保存（印刷）</button>
+        <p style="margin-top: 10px; color: #666; font-size: 14px;">
+            ※ブラウザの印刷機能が開きます。「送信先」で「PDFに保存」を選択してください
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>神奈川県公立高校入試対策　英語長文問題（科学テーマ）</h1>
+            <p>問6・問7　実戦形式</p>
+        </div>
+
+        <!-- 問6 -->
+        <div class="section">
+            <div class="section-title">問6　長文読解（スピーチと図表）【配点15点】</div>
+            
+            <p style="margin-bottom: 15px;">次の英文は、高校生のYuiが科学の授業でおこなったスピーチの原稿です。これを読んで、あとの(ア)～(ウ)の問いに答えなさい。</p>
+            
+            <div class="passage">
+                <p>Good morning, everyone. Today, I'd like to talk about plastic waste and how science is helping us solve this problem.</p>
+                
+                <p>Last summer, I visited a beach with my family. I was shocked to see a lot of plastic bottles and bags on the sand. My father told me that these plastics come from cities and rivers, and they travel to the ocean. I learned that plastic waste is becoming a serious problem around the world.</p>
+                
+                <p>According to scientists, about 8 million tons of plastic enter the ocean every year. Look at Graph 1. It shows how much plastic waste different countries produced in 2020. <span class="underline">①</span> You can see that the amount varies greatly between countries. This plastic doesn't disappear easily. <span class="blank">( ア )</span> Scientists say that a plastic bottle can take up to 450 years to break down naturally in the ocean.</p>
+                
+                <p>This plastic waste is dangerous for marine animals. Many sea turtles and fish eat plastic by mistake because they think it's food. When they eat too much plastic, they can't eat real food anymore, and they may die. Scientists have found plastic inside the bodies of many ocean animals, including whales and seabirds.</p>
+                
+                <p>However, there is good news. Scientists are working hard to find solutions. One interesting development is biodegradable plastic. This type of plastic is made from plants like corn and sugarcane. <span class="underline">②</span> Unlike regular plastic, biodegradable plastic can break down naturally in just a few months. Some companies are already using this eco-friendly plastic to make shopping bags and food containers.</p>
+                
+                <p>Another solution is plastic-eating bacteria. In 2016, Japanese scientists discovered a special type of bacteria that can eat plastic. These tiny organisms break down plastic into simple materials that don't harm the environment. Researchers around the world are now studying these bacteria. <span class="underline">③</span> They hope to use them in the future to clean up plastic waste.</p>
+                
+                <p>Graph 2 shows the results of a survey about plastic use. The survey asked 500 high school students in Japan about their daily plastic use habits. The graph tells us important information about how young people are trying to reduce plastic waste.</p>
+                
+                <p>What can we do to help? I think we should start with small actions. We can bring our own bags when we go shopping. We can use reusable water bottles instead of plastic ones. We can also choose products that use less plastic packaging. If everyone makes these small changes, together we can make a big difference.</p>
+                
+                <p>Science is giving us hope for the future. With new technologies like biodegradable plastic and plastic-eating bacteria, I believe we can solve the plastic waste problem. But we also need to change our daily habits. Let's work together to protect our beautiful ocean!</p>
+                
+                <p>Thank you for listening.</p>
+            </div>
+            
+            <table>
+                <caption><strong>Graph 1: Plastic Waste Production in 2020</strong> (単位: 百万トン)</caption>
+                <thead>
+                    <tr>
+                        <th>国名</th>
+                        <th>プラスチック廃棄物量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>アメリカ</td>
+                        <td>42.0</td>
+                    </tr>
+                    <tr>
+                        <td>中国</td>
+                        <td>59.1</td>
+                    </tr>
+                    <tr>
+                        <td>ドイツ</td>
+                        <td>14.5</td>
+                    </tr>
+                    <tr>
+                        <td>日本</td>
+                        <td>8.5</td>
+                    </tr>
+                    <tr>
+                        <td>インド</td>
+                        <td>9.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table>
+                <caption><strong>Graph 2: Survey Results - "How often do you use the following?"</strong><br>(対象: 日本の高校生500人)</caption>
+                <thead>
+                    <tr>
+                        <th>行動</th>
+                        <th>毎日</th>
+                        <th>週に数回</th>
+                        <th>めったにない</th>
+                        <th>全くしない</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>マイバッグを持参</td>
+                        <td>35%</td>
+                        <td>40%</td>
+                        <td>15%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>再利用可能な水筒を使用</td>
+                        <td>62%</td>
+                        <td>25%</td>
+                        <td>8%</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>プラスチック包装の少ない商品を選ぶ</td>
+                        <td>18%</td>
+                        <td>30%</td>
+                        <td>35%</td>
+                        <td>17%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="question">
+                <div class="question-label">(ア) 本文中の ( ア ) に入る最も適切な文を、次の1～4の中から一つ選び、その番号を書きなさい。(5点)</div>
+                <div class="choices">
+                    <div>1. That's why we should use more plastic products in our daily lives.</div>
+                    <div>2. This means plastic stays in the environment for a very long time.</div>
+                    <div>3. Therefore, scientists have stopped researching about plastic waste.</div>
+                    <div>4. This shows that plastic is the safest material for making bottles.</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-label">(イ) 本文中の下線部①～③のうち、次の内容を表しているものを一つ選び、その番号を書きなさい。(5点)</div>
+                <p style="margin-left: 20px; margin-top: 10px;">「研究者たちは、プラスチック廃棄物を減らすために、植物由来の素材を使用している。」</p>
+            </div>
+            
+            <div class="question">
+                <div class="question-label">(ウ) 次の1～8の文のうち、本文の内容に合っているものを二つ選び、その番号を書きなさい。(5点)</div>
+                <div class="choices">
+                    <div>1. Yui first became interested in plastic waste after she saw plastic on a beach last summer.</div>
+                    <div>2. According to Graph 1, Germany produced more plastic waste than China in 2020.</div>
+                    <div>3. Sea animals can easily find the difference between plastic and real food.</div>
+                    <div>4. Biodegradable plastic takes the same time to break down as regular plastic.</div>
+                    <div>5. Scientists in Japan found bacteria that can eat plastic in 2016.</div>
+                    <div>6. According to Graph 2, more than half of the students use reusable water bottles every day.</div>
+                    <div>7. Yui thinks that only scientists can solve the plastic waste problem.</div>
+                    <div>8. Graph 2 shows that 18% of students always choose products with less plastic packaging.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 問7 -->
+        <div class="section" style="page-break-before: always;">
+            <div class="section-title">問7　長文読解（資料活用）【配点10点】</div>
+            
+            <p style="margin-bottom: 15px;">次は、TakuとMeiが環境科学の展示会について話している対話文と、展示会のポスターです。これらを読んで、あとの(ア)・(イ)の問いに答えなさい。</p>
+            
+            <div class="passage">
+                <p><strong>Taku:</strong> Hi, Mei! Look at this poster. There's a special exhibition about environmental science next Saturday at City Hall.</p>
+                
+                <p><strong>Mei:</strong> Sounds interesting! What time does it start?</p>
+                
+                <p><strong>Taku:</strong> It opens at 10 a.m. and closes at 5 p.m. I want to see the workshop about solar energy. It starts at 11 a.m. and runs for 90 minutes.</p>
+                
+                <p><strong>Mei:</strong> That sounds great! But I'm also interested in the lecture about clean water technology. Let me check... Oh, it's at 1:30 p.m. and lasts for one hour.</p>
+                
+                <p><strong>Taku:</strong> Perfect! We can go to both. After your lecture, we could watch the documentary film about climate change. It starts at 3 p.m.</p>
+                
+                <p><strong>Mei:</strong> Wait, how long is the film?</p>
+                
+                <p><strong>Taku:</strong> It says here... 75 minutes. So it'll finish at 4:15 p.m.</p>
+                
+                <p><strong>Mei:</strong> That's good. But we should also visit the experiment corner. According to the poster, we need to make a reservation for that, and it's only for students who are 15 years old or older.</p>
+                
+                <p><strong>Taku:</strong> I'm 16 and you're 15, so we're both OK. Let's make a reservation when we arrive. By the way, do we need to pay an entrance fee?</p>
+                
+                <p><strong>Mei:</strong> Let me see... It says the entrance is free for students! But we need to bring our student ID cards.</p>
+                
+                <p><strong>Taku:</strong> Great! Oh, and there's also a special exhibition about space exploration on the second floor. It's open all day.</p>
+                
+                <p><strong>Mei:</strong> Wonderful! We have time before the workshop starts at 11. We could see that first.</p>
+                
+                <p><strong>Taku:</strong> Good idea! So, our plan is: space exhibition first, then your workshop at 11, my lecture at 1:30, the film at 3, and finally the experiment corner if we have time.</p>
+                
+                <p><strong>Mei:</strong> Actually, you have the workshop at 11, not me! I want to go to the lecture at 1:30.</p>
+                
+                <p><strong>Taku:</strong> Oh, you're right! I got confused. OK, let's meet at the entrance at 9:45 a.m. That way we'll have 15 minutes before it opens.</p>
+                
+                <p><strong>Mei:</strong> Sounds perfect!</p>
+            </div>
+            
+            <div class="poster">
+                <div class="poster-title">Environmental Science Exhibition</div>
+                
+                <div class="poster-info">
+                    <p><strong>Date:</strong> Next Saturday</p>
+                    <p><strong>Location:</strong> City Hall (1F & 2F)</p>
+                    <p><strong>Time:</strong> 10:00 a.m. - 5:00 p.m.</p>
+                </div>
+                
+                <div class="poster-section">
+                    <h4>【1st Floor】Program Schedule:</h4>
+                    <div class="poster-item">• <strong>10:00-11:30</strong> Workshop: Solar Energy Basics (Room A)</div>
+                    <div class="poster-item">• <strong>11:00-12:30</strong> Workshop: Recycling Techniques (Room B)</div>
+                    <div class="poster-item">• <strong>1:30-2:30</strong> Lecture: Clean Water Technology (Room A)</div>
+                    <div class="poster-item">• <strong>2:00-3:00</strong> Lecture: Forest Conservation (Room B)</div>
+                    <div class="poster-item">• <strong>3:00-4:15</strong> Documentary Film: "Our Changing Climate" (Main Hall)</div>
+                    <div class="poster-item">• <strong>10:00-5:00</strong> Experiment Corner (Room C) ★Reservation required, Ages 15+</div>
+                </div>
+                
+                <div class="poster-section">
+                    <h4>【2nd Floor】</h4>
+                    <div class="poster-item">• <strong>10:00-5:00</strong> Special Exhibition: Space Exploration</div>
+                </div>
+                
+                <div class="poster-section">
+                    <h4>Important Information:</h4>
+                    <div class="poster-item">• <strong>Entrance Fee:</strong> Free for students (Student ID required)</div>
+                    <div class="poster-item">• <strong>Reservation:</strong> Experiment Corner requires advance reservation</div>
+                    <div class="poster-item">• <strong>Age Limit:</strong> Some activities are restricted to visitors aged 15 and above</div>
+                    <div class="poster-item">• <strong>Facilities:</strong> Cafeteria available on 1st floor (11:30 a.m. - 3:00 p.m.)</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-label">(ア) TakuとMeiが見る予定のイベントを、時間順に正しく並べたものを、次の1～4の中から一つ選び、その番号を書きなさい。(5点)</div>
+                <div class="choices">
+                    <div>1. Space Exhibition → Workshop (Solar Energy) → Lecture (Clean Water) → Documentary Film</div>
+                    <div>2. Workshop (Solar Energy) → Space Exhibition → Lecture (Clean Water) → Documentary Film</div>
+                    <div>3. Space Exhibition → Lecture (Clean Water) → Workshop (Solar Energy) → Documentary Film</div>
+                    <div>4. Workshop (Solar Energy) → Lecture (Clean Water) → Space Exhibition → Documentary Film</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-label">(イ) 次の1~4の文のうち、対話文とポスターの内容から正しいと言えるものを一つ選び、その番号を書きなさい。(5点)</div>
+                <div class="choices">
+                    <div>1. Taku and Mei need to pay money to enter the exhibition because they are high school students.</div>
+                    <div>2. The workshop about solar energy will finish before the lecture about clean water technology starts.</div>
+                    <div>3. Taku and Mei can eat lunch at the cafeteria after watching the documentary film.</div>
+                    <div>4. Both Taku and Mei are old enough to use the experiment corner at the exhibition.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 解答 -->
+        <div class="answer-section" style="page-break-before: always;">
+            <h3>■ 解答と配点</h3>
+            <p><strong>問6</strong></p>
+            <p style="margin-left: 20px;">(ア) <strong>2</strong> (5点)</p>
+            <p style="margin-left: 20px;">(イ) <strong>②</strong> (5点)</p>
+            <p style="margin-left: 20px;">(ウ) <strong>1と5</strong> または <strong>1と6</strong> または <strong>1と8</strong> または <strong>5と6</strong> または <strong>5と8</strong> または <strong>6と8</strong> (完答で5点)</p>
+            <p style="margin-top: 15px;"><strong>問7</strong></p>
+            <p style="margin-left: 20px;">(ア) <strong>1</strong> (5点)</p>
+            <p style="margin-left: 20px;">(イ) <strong>2</strong> (5点)</p>
+        </div>
+
+        <!-- 語注 -->
+        <div class="vocab">
+            <h3>■ 語注</h3>
+            <div class="vocab-list">
+                <div class="vocab-item">• plastic waste: プラスチック廃棄物</div>
+                <div class="vocab-item">• shocked: 衝撃を受けた</div>
+                <div class="vocab-item">• marine animals: 海洋動物</div>
+                <div class="vocab-item">• by mistake: 間違って</div>
+                <div class="vocab-item">• biodegradable: 生分解性の</div>
+                <div class="vocab-item">• sugarcane: サトウキビ</div>
+                <div class="vocab-item">• eco-friendly: 環境にやさしい</div>
+                <div class="vocab-item">• bacteria: バクテリア、細菌</div>
+                <div class="vocab-item">• organism: 生物</div>
+                <div class="vocab-item">• packaging: 包装</div>
+                <div class="vocab-item">• reusable: 再利用可能な</div>
+                <div class="vocab-item">• exhibition: 展示会</div>
+                <div class="vocab-item">• workshop: ワークショップ、実習</div>
+                <div class="vocab-item">• solar energy: 太陽エネルギー</div>
+                <div class="vocab-item">• documentary: ドキュメンタリー</div>
+                <div class="vocab-item">• climate change: 気候変動</div>
+                <div class="vocab-item">• reservation: 予約</div>
+                <div class="vocab-item">• entrance fee: 入場料</div>
+                <div class="vocab-item">• space exploration: 宇宙探査</div>
+                <div class="vocab-item">• conservation: 保全</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 印刷前の確認
+        window.onbeforeprint = function() {
+            console.log('PDFとして保存されます');
+        };
+    </script>
+</body>
+</html>
